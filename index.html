@@ -59,6 +59,39 @@
         }
 
         // Codifica a partir de aquí
+        //Click event in Button
+        let button = document.querySelector('button');
+        button.addEventListener('click', async function(){
+            //Include user points inside DOM
+            document.querySelector('#userVote').textContent = rangeControl.value;
+            //Send information to API
+            let result = await sendAPIinfo();
+            displayAPIinfo(result);
+        });
+
+        async function sendAPIinfo(){
+            let userResponse = {
+                score: Number(rangeControl.value)
+            };
+            let response = await fetch ('https://votes-api-sjv2.onrender.com/send-score',{
+                method:'POST', 
+                headers:{
+                    'Content-Type': 'application/json;charset=utf-8'
+                }, 
+                body: JSON.stringify(userResponse)
+            });
+            //API response
+            let result = await response.json();
+            return result;
+            
+        }
+        function displayAPIinfo(result){
+             //display elements
+            document.querySelector('#averageScore').textContent = Math.floor(result.averageScore);
+            document.querySelector('#totalVotes').textContent = result.totalVotes;
+        }
+       
+        
     </script>
 
 </body>
