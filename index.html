@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+    <title>Votación </title>
+    <style>
+        .product-image {
+            max-width: 30%;
+            height: auto;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .form-group {
+            margin: 20px 0;
+        }
+
+        .result {
+            margin: 20px 0;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Volora la serie</h1>
+        <img src="https://m.media-amazon.com/images/M/MV5BZmQ0NDE5NjYtMGU4OS00NGMwLWJmOGYtZjVmYTFhMzA3ZGQ2XkEyXkFqcGdeQXVyMDc5ODIzMw@@._V1_FMjpg_UX1000_.jpg"
+            alt="MOVIE" class="product-image">
+
+        <form id="voteForm">
+            <div class="form-group">
+                <label for="score">Tu puntuación: <span id="scoreValue">5</span></label><br>
+                <input type="range" id="score" name="score" min="1" max="10" value="5" oninput="updateScoreValue()">
+            </div>
+            <div class="form-group">
+                <button type="button" onclick="submitVote()">Enviar Votación</button>
+            </div>
+        </form>
+
+        <div class="result">
+            <div>Tu votación: <span id="userVote">N/A</span></div>
+            <div>Valoración media: <span id="averageScore">N/A</span></div>
+            <div>Número total de votos recibidos: <span id="totalVotes">N/A</span></div>
+
+        </div>
+    </div>
+    <script>
+        const rangeControl = document.querySelector('#score');
+        function updateScoreValue() {
+            document.querySelector('#scoreValue').textContent = rangeControl.value;
+        }
+
+        // Codifica a partir de aquí
+    </script>
+
+</body>
