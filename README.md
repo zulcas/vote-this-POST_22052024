@@ -16,3 +16,7 @@ Muestra por consola la respuesta de la API para verificar que todo ha ido bien
 ## Iteración 3
 
 Usa los datos que devuelve la API para rellenar los apartados "Valoración media:" y "Número total de votos recibidos"
+
+## BONUS
+
+Intenta _engañar_ a la API. Modificar el control de rango para poderle enviar un valor mayor de 10. ¿que sucede?
