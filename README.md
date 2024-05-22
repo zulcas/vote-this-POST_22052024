@@ -10,10 +10,14 @@ Por ello, hemos creado un _endpoint_ que recibe las votaciones de todos los disp
 
 Completa el código para que, al hacer clic en Enviar Votación, aparezca tu puntuación en el apartado "Tu votación"
 
+<img src="https://oscarm.tinytake.com/media/1630d11?filename=1716392974927_TinyTake22-05-2024-05-49-19_638519897739083121.png&sub_type=thumbnail_preview&type=attachment&width=1200&height=695" title="Powered by TinyTake Screen Capture"/><br><a href="https://www.tinytake.com">Powered by TinyTake Screen Capture</a>
+
 ## Iteración 2
 
 Envia los datos de la puntuación mediante el método POST a **https://votes-api-sjv2.onrender.com/send-score**
 Muestra por consola la respuesta de la API para verificar que todo ha ido bien
+
+<img src="https://oscarm.tinytake.com/media/1630d13?filename=1716393034595_TinyTake22-05-2024-05-50-24_638519898339257603.png&sub_type=thumbnail_preview&type=attachment&width=1199&height=576" title="Powered by TinyTake Screen Capture"/><br><a href="https://www.tinytake.com">Powered by TinyTake Screen Capture</a>
 
 ## Iteración 3
 
